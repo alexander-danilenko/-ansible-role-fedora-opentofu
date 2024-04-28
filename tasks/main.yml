@@ -1,0 +1,14 @@
+---
+
+- name: Add repository
+  become: true
+  ansible.builtin.template:
+    src: opentofu.repo.j2
+    dest: '{{ opentofu_repo_file }}'
+
+- name: Install packages
+  become: true
+  dnf:
+    name: '{{ opentofu_packages }}'
+    state: present
+    update_cache: yes

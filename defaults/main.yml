@@ -1,0 +1,7 @@
+---
+# Yum repository file.
+opentofu_repo_file: '/etc/yum.repos.d/opentofu.repo'
+
+# Packages to install after repo is added.
+opentofu_packages:
+  - 'tofu'
